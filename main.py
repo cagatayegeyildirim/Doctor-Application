@@ -11,12 +11,12 @@ app = Flask(__name__)
 def database():
     connection = psycopg2.connect.connect(user="postgres",
                                           password="password",
-                                          host="192.168.1.43",
-                                          port="5432",
-                                          database="hospitalmanagement")
+                                          host="HOSTIP",
+                                          port="HOSTPORT",
+                                          database="DATABASENAME")
     cursor = connection.cursor()
 
-# database güncellendi
+
 # Create a route decorator
 
 
@@ -26,9 +26,9 @@ def index():
         # sqlite
         with psycopg2.connect(user="postgres",
                               password="password",
-                              host="192.168.1.43",
-                              port="5432",
-                              database="hospitalmanagement") as connection:
+                              host="HOSTIP,
+                              port="HOSTPORT",
+                              database="DATABASENAME") as connection:
             cursor = connection.cursor()
         # htmlform
         panelemail = request.form['panelemail']
@@ -51,7 +51,7 @@ def index():
 def createnewdoctor():
     return render_template('createnewdoctor.html')
 
-# database güncellemesi yapıldı
+# DATABASE UPDATE SUCCESSFULLY.
 
 
 @app.route('/shownewdoctor', methods=['POST', 'GET'])
@@ -69,9 +69,9 @@ def shownewdoctor():
 
             connection = psycopg2.connect(user="postgres",
                                           password="password",
-                                          host="192.168.1.43",
-                                          port="5432",
-                                          database="hospitalmanagement")
+                                          host="HOSTIP",
+                                          port="HOSTPORT",
+                                          database="DATABASENAME")
 
             cursor = connection.cursor()
 
@@ -122,9 +122,9 @@ def showaddedpatient():
 
             connection = psycopg2.connect(user="postgres",
                                           password="password",
-                                          host="192.168.1.43",
-                                          port="5432",
-                                          database="hospitalmanagement")
+                                          host="HOSTIP",
+                                          port="HOSTPORT",
+                                          database="DATABASENAME")
 
             cursor = connection.cursor()
 
@@ -148,16 +148,16 @@ def showaddedpatient():
             return render_template("showaddedpatient.html", msg=msg)
             connection.close()
 
-# database güncellendi
+
 
 
 @ app.route('/patientlist')
 def list():
     connection = psycopg2.connect(user="postgres",
                                   password="password",
-                                  host="192.168.1.43",
-                                  port="5432",
-                                  database="hospitalmanagement")
+                                  host="HOSTIP",
+                                  port="HOSTPORT",
+                                  database="DATABASENAME")
 
     cursor = connection.cursor(cursor_factory=psycopg2.extras.DictCursor)
     query = f"""
@@ -172,9 +172,9 @@ def list():
 def deletelistwithrowid():
     connection = psycopg2.connect(user="postgres",
                                   password="password",
-                                  host="192.168.1.43",
-                                  port="5432",
-                                  database="hospitalmanagement")
+                                  host="HOSTIP",
+                                  port="HOSTPORT",
+                                  database="DATABASENAME")
     cursor = connection.cursor(cursor_factory=psycopg2.extras.DictCursor)
     query = f"""
     SELECT * FROM patients
@@ -191,7 +191,7 @@ def shownewpatientlistafterdelete():
             deleteidnumber = request.form['deleteidnumber']
 
             connection = psycopg2.connect(
-                user="postgres", password="password", host="192.168.1.43", port="5432", database="hospitalmanagement")
+                user="postgres", password="password", host="HOSTIP", port="HOSTPORT", database="DATABASENAME")
 
             cursor = connection.cursor(
                 cursor_factory=psycopg2.extras.DictCursor)
@@ -218,9 +218,9 @@ def loggedincloneback():
 def getpatient(search):
     with psycopg2.connect(user="postgres",
                           password="password",
-                          host="192.168.1.43",
-                          port="5432",
-                          database="hospitalmanagement") as connection:
+                          host="HOSTIP",
+                          port="HOSTPORT",
+                          database="DATABASENAME") as connection:
         cursor = connection.cursor()
         # like problem in here (sql)
         searchpat = "SELECT * FROM patients WHERE patientid = %s OR pdateofbirth = %s"
@@ -251,7 +251,7 @@ def update_student(id):
         email = request.form['email']
 
         connection = psycopg2.connect(user="postgres", password="password",
-                                      host="192.168.1.43", port="5432", database="hospitalmanagement")
+                                      host="HOSTIP", port="HOSTPORT", database="DATABASENAME")
         cursor = connection.cursor(cursor_factory=psycopg2.extras.DictCursor)
         cursor.execute("""
             UPDATE patients
