@@ -1,0 +1,223 @@
+/*
+	@name loggedin
+*/
+/* Only edit this if you know what you are doing! */
+body {
+	margin: 0px;
+	padding: 0px;
+	font-family: "Arial";
+	overflow-x: hidden;
+}
+
+/* Only edit this if you know what you are doing! */
+img {
+	position: absolute;
+	display: block;
+	margin: 0px;
+	border: none;
+	padding: 0px;
+}
+
+/* Only edit this if you know what you are doing! */
+div {
+	position: absolute;
+}
+
+#content-container {
+	display: block;
+	position: relative;
+	width: 1440px;
+	width: 1440px;
+	height: 1024px;
+	overflow: hidden;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
+#page_loggedin_ek1 {
+	top: 0px;
+	left: 0px;
+	width: 1440px;
+	height: 1024px;
+}
+
+
+
+
+
+
+
+#rectangle_1 {
+	top: 169px;
+	left: 349px;
+	width: 1003px;
+	height: 84px;
+	-ms-border-radius: 94.5px;
+	-o-border-radius: 94.5px;
+	-moz-border-radius: 94.5px;
+	-webkit-border-radius: 94.5px;
+	border-radius: 94.5px;
+	background: rgba(175.31, 246.61, 255, 1);
+}
+
+
+#rectangle_2 {
+	top: 320px;
+	left: 477px;
+	width: 752px;
+	height: 84px;
+	-ms-border-radius: 94.5px;
+	-o-border-radius: 94.5px;
+	-moz-border-radius: 94.5px;
+	-webkit-border-radius: 94.5px;
+	border-radius: 94.5px;
+	background: rgba(25.55, 149.39, 157.25, 1);
+}
+
+
+#rectangle_3 {
+	top: 427px;
+	left: 477px;
+	width: 752px;
+	height: 84px;
+	-ms-border-radius: 94.5px;
+	-o-border-radius: 94.5px;
+	-moz-border-radius: 94.5px;
+	-webkit-border-radius: 94.5px;
+	border-radius: 94.5px;
+	background: rgba(25.55, 149.39, 157.25, 1);
+}
+
+
+#rectangle_4 {
+	top: 534px;
+	left: 477px;
+	width: 752px;
+	height: 84px;
+	-ms-border-radius: 94.5px;
+	-o-border-radius: 94.5px;
+	-moz-border-radius: 94.5px;
+	-webkit-border-radius: 94.5px;
+	border-radius: 94.5px;
+	background: rgba(25.55, 149.39, 157.25, 1);
+}
+
+
+#rectangle_5 {
+	top: 641px;
+	left: 477px;
+	width: 752px;
+	height: 84px;
+	-ms-border-radius: 94.5px;
+	-o-border-radius: 94.5px;
+	-moz-border-radius: 94.5px;
+	-webkit-border-radius: 94.5px;
+	border-radius: 94.5px;
+	background: rgba(25.55, 149.39, 157.25, 1);
+}
+
+
+#rectangle_6 {
+	top: 748px;
+	left: 477px;
+	width: 752px;
+	height: 84px;
+	-ms-border-radius: 94.5px;
+	-o-border-radius: 94.5px;
+	-moz-border-radius: 94.5px;
+	-webkit-border-radius: 94.5px;
+	border-radius: 94.5px;
+	background: rgba(25.55, 149.39, 157.25, 1);
+}
+
+
+#add_a_new_patient {
+	top: 333px;
+	left: 646px;
+	width: 476px;
+	height: 92px;
+	overflow: hidden;
+	font-family: Inter;
+	font-size: 48px;
+	text-align: left;
+	color: #AFF6FF;
+}
+
+
+#find_a_patient {
+	top: 440px;
+	left: 703px;
+	width: 365px;
+	height: 92px;
+	overflow: hidden;
+	font-family: Inter;
+	font-size: 48px;
+	text-align: left;
+	color: #AFF6FF;
+}
+
+
+#show_all_patients {
+	top: 547px;
+	left: 660px;
+	width: 446px;
+	height: 92px;
+	overflow: hidden;
+	font-family: Inter;
+	font-size: 48px;
+	text-align: left;
+	color: #AFF6FF;
+}
+
+
+#delete_a_patient {
+	top: 758px;
+	left: 660px;
+	width: 414px;
+	height: 92px;
+	overflow: hidden;
+	font-family: Inter;
+	font-size: 48px;
+	text-align: left;
+	color: #AFF6FF;
+}
+
+
+#modify_a_patient_record {
+	top: 654px;
+	left: 612px;
+	width: 598px;
+	height: 92px;
+	overflow: hidden;
+	font-family: Inter;
+	font-size: 48px;
+	text-align: left;
+	color: #AFF6FF;
+}
+
+
+#doctor {
+	top: 130px;
+	left: 97px;
+	width: 199px;
+	height: 807px;
+}
+
+
+#patient_management_system {
+	top: -332px;
+	left: -193px;
+	width: 924px;
+	height: 92px;
+	overflow: hidden;
+	font-family: Inter;
+	font-size: 48px;
+	text-align: left;
+	color: #1A959D;
+}
+
+
+
+/* Add your custom CSS here */

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete Patient</title>
+    <link rel="StyleSheet" href="../static/style/deletepatient.css" />
+</head>
+
+<body bgcolor="#98AFC7">
+    <center>
+        <table>
+            <thead>
+                <td>ID Number</td>
+                <td>First Name</td>
+                <td>Last Name</td>
+                <td>Place of Birth</td>
+                <td>Date of Birth</td>
+                <td>Gender</td>
+                <td>Join Date</td>
+                <td>Phone Number</td>
+                <td>E-mail Address</td>
+                <td>Address</td>
+            </thead>
+
+            {% for row in rows %}
+            <tr>
+                <td>{{row["patientid"]}}</td>
+                <td>{{row["patientname"]}}</td>
+                <td> {{row["patientsurname"]}}</td>
+                <td>{{row['pplaceofbirth']}}</td>
+                <td>{{row['pdateofbirth']}}</td>
+                <td>{{row['pgender']}}</td>
+                <td>{{row['pdateofjoin']}}</td>
+                <td>{{row['patientnumber']}}</td>
+                <td>{{row['patientemail']}}</td>
+                <td>{{row['patientadress']}}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </center>
+    <center>
+        <form action="http://localhost:8080/shownewpatientlistafterdelete" method="POST">
+            <h3 style="color: #004347">Delete a Patient</h3>
+            <p>ID Number <input type="text" name="deleteidnumber" required></p>
+            <p><input type="submit" value="submit" /></p>
+        </form>
+
+        <h4><a href="\loggedin">go back to home page</a></h4>
+    </center>
+</body>
+
+</html>

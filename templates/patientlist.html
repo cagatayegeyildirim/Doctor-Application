@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Patient List</title>
+    <link rel="StyleSheet" href="../static/style/showallpatients.css" />
+</head>
+
+<body bgcolor="#98AFC7">
+    <br>
+    <br>
+    <center>
+        <table>
+            <thead>
+                <td>ID Number</td>
+                <td>First Name</td>
+                <td>Last Name</td>
+                <td>Place of Birth</td>
+                <td>Date of Birth</td>
+                <td>Gender</td>
+                <td>Join Date</td>
+                <td>Phone Number</td>
+                <td>E-mail Address</td>
+                <td>Address</td>
+            </thead>
+
+            {% for row in rows %}
+            <tr>
+                <td>{{row["patientid"]}}</td>
+                <td>{{row["patientname"]}}</td>
+                <td> {{row["patientsurname"]}}</td>
+                <td>{{row['pplaceofbirth']}}</td>
+                <td>{{row['pdateofbirth']}}</td>
+                <td>{{row['pgender']}}</td>
+                <td>{{row['pdateofjoin']}}</td>
+                <td>{{row['patientnumber']}}</td>
+                <td>{{row['patientemail']}}</td>
+                <td>{{row['patientadress']}}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </center>
+
+    <center>
+        <h4><a href="/loggedin">go back to home page</a></h4>
+    </center>
+
+</body>
+
+</html>

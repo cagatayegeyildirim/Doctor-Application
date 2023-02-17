@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Find Patient</title>
+    <link rel="stylesheet" href="static/s4_users.css" />
+</head>
+
+<body bgcolor="#98AFC7">
+    <br>
+    <br>
+    <br>
+    <center>
+        <h3 style="color: #004347">Please enter Patient ID or Date of Birth</h3>
+        <form method="post">
+            <input type="text" name="search" required />
+            <input type="submit" value="Search" />
+        </form>
+
+
+        {% if usr | length != 0 %}
+        <table id="demo">
+            {% for u in usr %}
+            <tr>
+                <td>{{ u[0] }}</td>
+                <td>{{ u[1] }}</td>
+                <td>{{ u[2] }}</td>
+                <td>{{ u[3] }}</td>
+                <td>{{ u[4] }}</td>
+                <td>{{ u[5] }}</td>
+                <td>{{ u[6] }}</td>
+                <td>{{ u[7] }}</td>
+                <td>{{ u[8] }}</td>
+                <td>{{ u[9] }}</td>
+
+            </tr>
+            {% endfor %}
+        </table>
+        {% else %}
+        <div id="demo">No search results.</div>
+        {% endif %}
+        <h4><a href="/loggedin">go back to home page</a></h4>
+    </center>
+</body>
+
+</html>
